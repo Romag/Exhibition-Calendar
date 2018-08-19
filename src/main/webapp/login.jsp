@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java"%>
+<%@ page isELIgnored="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <html lang="en">
   <head>
@@ -25,6 +29,7 @@
 	
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/3.3/examples/signin/signin.css" rel="stylesheet">
+    
 	
   </head>
 
@@ -32,7 +37,6 @@
 
     <div class="container">
 		
-<!-- 		REDO ACTION -->
       <form class="form-signin" action="${oageContext.request.contextPath}"> 
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
@@ -42,6 +46,9 @@
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
+      
+	
+	      
 
     </div> <!-- /container -->
     
