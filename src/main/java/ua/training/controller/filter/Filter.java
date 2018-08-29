@@ -9,7 +9,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter(urlPatterns="/*")
+@WebFilter(value="/filter")
 public class Filter implements javax.servlet.Filter {
 
 	public Filter() {
@@ -25,8 +25,6 @@ public class Filter implements javax.servlet.Filter {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		// TODO Auto-generated method stub
-
 	}
 
 	@Override
