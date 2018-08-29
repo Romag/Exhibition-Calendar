@@ -7,6 +7,7 @@ import javax.sql.DataSource;
 
 import ua.training.model.dao.DAOFactory;
 import ua.training.model.dao.interfaces.ExhibitionDAO;
+import ua.training.model.dao.interfaces.UserDAO;
 
 public class JDBCDAOFactory extends DAOFactory {
 
@@ -17,6 +18,11 @@ public class JDBCDAOFactory extends DAOFactory {
 		return new JDBCExhibitionDAO(getConnection());
 	}
 
+	@Override
+	public UserDAO createUserDAO() {
+		return new JDBCUserDAO(getConnection());
+	}
+	
     private Connection getConnection(){
         try {
             return dataSource.getConnection();
@@ -24,4 +30,6 @@ public class JDBCDAOFactory extends DAOFactory {
             throw new RuntimeException(e);
         }
     }
+
+
 }
