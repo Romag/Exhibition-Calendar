@@ -33,7 +33,7 @@ public class Servlet extends HttpServlet {
 		Command command = commands.getOrDefault(uri, def->"index.jsp");
 		String path = command.execute(req);
 		
-		req.getRequestDispatcher("."+path).forward(req, resp);
+		req.getRequestDispatcher(path).forward(req, resp);
 	}
 
 	@Override
