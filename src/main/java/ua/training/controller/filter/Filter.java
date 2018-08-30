@@ -9,7 +9,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter(value="/filter")
+@WebFilter(urlPatterns= {"/myuselessfilter"})
 public class Filter implements javax.servlet.Filter {
 
 	public Filter() {
