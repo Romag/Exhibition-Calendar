@@ -9,7 +9,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<c:out value="$(pageContext.)"></c:out>
+	<table title="Users" >
+		<caption>Users</caption>
+<%-- 		<c:forEach> --%>
+<!-- 			<tr></tr> -->
+<%-- 		</c:forEach> --%>
+	</table>
 	
 	
 </body>

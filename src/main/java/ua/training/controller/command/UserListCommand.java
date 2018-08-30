@@ -10,7 +10,6 @@ public class UserListCommand implements Command {
 	@Override
 	public String execute(HttpServletRequest request) {
 		request.setAttribute("userList", service.getAllUsers());
-		request.getRequestDispatcher("WEB-INF/userList");
 		return "WEB-INF/userlist.jsp";
 	}
 

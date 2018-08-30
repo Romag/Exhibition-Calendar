@@ -1,6 +1,7 @@
 package ua.training.model.dao.impl;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 
 import javax.sql.DataSource;
@@ -25,10 +26,19 @@ public class JDBCDAOFactory extends DAOFactory {
 	
     private Connection getConnection(){
         try {
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+
             return dataSource.getConnection();
         } catch (SQLException e) {
             throw new RuntimeException(e);
-        }
+        } catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		return null;
     }
 
 

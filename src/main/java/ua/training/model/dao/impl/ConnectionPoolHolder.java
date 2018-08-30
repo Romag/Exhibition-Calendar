@@ -16,6 +16,11 @@ private static volatile DataSource dataSource;
                     ds.setUrl("jdbc:mysql://localhost:3306/exhibition_calendar");
                     ds.setUsername("root");
                     ds.setPassword("root");
+                    ds.setMinIdle(5);
+                    ds.setMaxIdle(10);
+                    ds.setMaxOpenPreparedStatements(100);
+                    ds.addConnectionProperty("serverTimezone", "UTC");
+                    ds.setDriverClassName("com.mysql.jdbc.Driver");
                     
                     dataSource = ds;
                 }
