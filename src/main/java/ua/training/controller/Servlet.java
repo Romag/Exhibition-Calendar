@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import ua.training.controller.command.Command;
 import ua.training.controller.command.UserListCommand;
 
-@WebServlet(urlPatterns = {"/DispatcherServlet", "/api/*"})
+@WebServlet(urlPatterns = {"/", "/api/*"})
 public class Servlet extends HttpServlet {
 	Map<String, Command> commands = new HashMap<>();
 	
