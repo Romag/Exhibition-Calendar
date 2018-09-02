@@ -7,14 +7,17 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>List of all users</title>
 </head>
 
 <body>
 	<table title="Users" >
 		<caption>Users</caption>
-		<c:forEach items="userList">
-		
+		<c:forEach items="${userList}" var="user">
+			<br/> 
+			<tr>
+				<c:out value="${user.email}"></c:out>
+			</tr>
 		</c:forEach>
 	</table>
 	

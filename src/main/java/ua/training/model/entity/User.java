@@ -37,5 +37,17 @@ public class User {
 	public void setCreationTime(LocalDateTime creationTime) {
 		this.creationTime = creationTime;
 	}
+
+	@Override
+	public String toString() {
+		return "User [email=" + email 
+				+ ", password=" + password 
+				+ ", creationTime=" 
+				+ creationTime + "]";
+	}
+
+	
+	
+	
 	
 }
