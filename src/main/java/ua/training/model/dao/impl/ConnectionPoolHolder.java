@@ -20,6 +20,7 @@ private static volatile DataSource dataSource;
                     ds.setMaxIdle(10);
                     ds.setMaxOpenPreparedStatements(100);
                     ds.addConnectionProperty("serverTimezone", "UTC");
+                    ds.addConnectionProperty("useSSL", "false");
                     ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
                     
                     dataSource = ds;

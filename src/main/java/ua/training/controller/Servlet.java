@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import ua.training.controller.command.Command;
 import ua.training.controller.command.UserListCommand;
 
-@WebServlet(urlPatterns = {"/", "/api/*"})
+@WebServlet(urlPatterns = {"/",})
 public class Servlet extends HttpServlet {
 	Map<String, Command> commands = new HashMap<>();
 	
@@ -27,12 +27,18 @@ public class Servlet extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("doGet");
+		System.out.println(req.getRequestedSessionId());
+		System.out.println(req.getRequestURI());
+		System.out.println(req.getRequestURL());
+		
 		String uri = req.getRequestURI();
 		uri = uri.replaceAll(".*/api/", "");
 		
 		Command command = commands.getOrDefault(uri, def->"index.jsp");
 		String path = command.execute(req);
 		
+		System.out.println(path);
 		req.getRequestDispatcher(path).forward(req, resp);
 	}
 
