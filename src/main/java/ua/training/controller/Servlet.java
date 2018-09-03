@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import ua.training.controller.command.Command;
+import ua.training.controller.command.LoginCommand;
 import ua.training.controller.command.UserListCommand;
 
 @WebServlet(urlPatterns = {"/",})
@@ -22,6 +23,7 @@ public class Servlet extends HttpServlet {
 	@Override
 	public void init() throws ServletException {
 		commands.put("users", new UserListCommand());
+		commands.put("login", new LoginCommand());
 		super.init();
 	}
 	
