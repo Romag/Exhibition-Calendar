@@ -11,12 +11,17 @@
 </head>
 
 <body>
-	<table title="Users" >
+	<table title="Users" > 
 		<caption>Users</caption>
+		<tr>
+			<th>Email</th>
+			<th>Creation Time</th>
+		</tr>
 		<c:forEach items="${userList}" var="user">
 			<br/> 
 			<tr>
-				<c:out value="${user.email}"></c:out>
+				<td><c:out value="${user.email}"></c:out></td>
+				<td><c:out value="${user.creationTime}"></c:out></td>
 			</tr>
 		</c:forEach>
 	</table>
