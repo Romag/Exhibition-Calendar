@@ -11,7 +11,6 @@ public class Exhibit {
 	}
 
 	public Exhibit() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public int getId() {

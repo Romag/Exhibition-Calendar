@@ -20,6 +20,9 @@ public class Exposition {
 		this.exhibitionHall = exhibitionHall;
 	}
 	
+	public Exposition() {
+	}
+
 	public int getId() {
 		return id;
 	}

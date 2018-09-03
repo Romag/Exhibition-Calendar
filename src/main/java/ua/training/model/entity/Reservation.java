@@ -12,6 +12,9 @@ public class Reservation {
 		this.exposition = exposition;
 	}
 	
+	public Reservation() {
+	}
+
 	public int getId() {
 		return id;
 	}

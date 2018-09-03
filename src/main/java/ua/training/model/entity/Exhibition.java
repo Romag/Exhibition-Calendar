@@ -1,20 +1,21 @@
 package ua.training.model.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Exhibition {
-	int id;
-	String descr;
+	private int id;
+	private String  descr;
 	
-	List<Exhibit> exhibits;
-	List<String> exhibitNames;
+	private List<Exhibit> exhibits;
 	
 	public Exhibition(int id, String descr, List<Exhibit> exhibits, List<String> exhibitNames) {
 		super();
 		this.id = id;
 		this.descr = descr;
 		this.exhibits = exhibits;
-		this.exhibitNames = exhibitNames;
+	}
+	public Exhibition() {
 	}
 	public int getId() {
 		return id;
@@ -34,12 +35,11 @@ public class Exhibition {
 	public void setExhibits(List<Exhibit> exhibits) {
 		this.exhibits = exhibits;
 	}
-	public List<String> getExhibitNames() {
-		return exhibitNames;
+	public void addExhibit(Exhibit exhib) {
+		if(exhibits == null) exhibits = new ArrayList<Exhibit>();
+		exhibits.add(exhib);
 	}
-	public void setExhibitNames(List<String> exhibitNames) {
-		this.exhibitNames = exhibitNames;
-	}
+
 
 
 }

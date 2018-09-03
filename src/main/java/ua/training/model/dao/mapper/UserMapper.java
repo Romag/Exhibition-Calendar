@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 import ua.training.model.entity.User;
 
-public class UserMapper {
+public class UserMapper implements Mapper<User>{
 	
 	public User extractFromResultSet(ResultSet rs) throws SQLException {
 		User user = new User();
